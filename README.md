@@ -1,8 +1,7 @@
-# React + Vite
+Morse Code Converter in React
+Welcome to our Morse Code Converter – a dynamic web application designed to effortlessly translate letters and numbers into Morse code. Built with React, this user-friendly website offers a seamless experience for encoding messages in the classic Morse code language.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features:
+Easy Conversion: Quickly convert text to Morse code with a user-friendly interface.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Letter and Number Support: Whether it's letters, numbers, or a combination of both, our converter has you covered.

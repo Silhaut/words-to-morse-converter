@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import '../css/containers.css'
 import { morseCodeReverseMap } from './morse-alphabet/morseCodeReverseMap'
 import { morseCodeMap } from './morse-alphabet/morseCodeMap'
+import InputTextArea from './InputTextArea'
 
 export default function Converter() {
 	const [inputMorse, setInputMorse] = useState('')
@@ -27,15 +28,15 @@ export default function Converter() {
 		setConvertedMorse(morseResult)
 	}
 
-	const handleInputChangeWords = inputedWords => {
-		const inputValue = inputedWords.target.value
+	const handleInputChangeWords = inputWordsEvent => {
+		const inputValue = inputWordsEvent.target.value
 		setInputMorse(inputValue)
 		convertToWords(inputValue)
 		setInputText('')
 	}
 
-	const handleInputChangeMorse = inputedMorse => {
-		const inputValue = inputedMorse.target.value
+	const handleInputChangeMorse = inputMorseEvent => {
+		const inputValue = inputMorseEvent.target.value
 		setInputText(inputValue)
 		convertToMorse(inputValue)
 		setInputMorse('')
@@ -59,50 +60,22 @@ export default function Converter() {
 
 	return (
 		<>
-			<div className='container'>
-				<div className='options'>
-					<h3>Text</h3>
-					<div className='option-buttons'>
-						<button
-							className='copy-button'
-							onClick={() => handleCopy(convertedWords)}
-						>
-							<i className='fa-regular fa-clipboard'></i>
-						</button>
-						<button className='reset-button' onClick={handleDelete}>
-							<i className='fas fa-trash-alt'></i>
-						</button>
-					</div>
-				</div>
-				<textarea
-					id='words-to-morse-input'
-					value={inputText}
-					onChangeCapture={handleInputChangeMorse}
-					placeholder={convertedWords}
-				/>
-			</div>
-			<div className='container'>
-				<div className='options'>
-					<h3>Morse code</h3>
-					<div className='option-buttons'>
-						<button
-							className='copy-button'
-							onClick={() => handleCopy(convertedMorse)}
-						>
-							<i className='fa-regular fa-clipboard'></i>
-						</button>
-						<button className='reset-button' onClick={handleDelete}>
-							<i className='fas fa-trash-alt'></i>
-						</button>
-					</div>
-				</div>
-				<textarea
-					id='words-to-morse-input'
-					value={inputMorse}
-					onChangeCapture={handleInputChangeWords}
-					placeholder={convertedMorse}
-				/>
-			</div>
+			<InputTextArea
+				value={inputText}
+				onChange={handleInputChangeMorse}
+				onCopy={() => handleCopy(convertedWords)}
+				onReset={handleDelete}
+				placeholder={convertedWords}
+				buttonText='Text'
+			/>
+			<InputTextArea
+				value={inputMorse}
+				onChange={handleInputChangeWords}
+				onCopy={() => handleCopy(convertedMorse)}
+				onReset={handleDelete}
+				placeholder={convertedMorse}
+				buttonText='Morse Code'
+			/>
 		</>
 	)
 }

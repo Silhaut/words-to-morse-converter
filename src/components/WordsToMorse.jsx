@@ -55,28 +55,25 @@ export default function WordsToMorse() {
 
 	const handleInputChange = inputed => {
 		setInputText(inputed.target.value)
-	}
-
-	const handleSubmit = inputed => {
-		inputed.preventDefault()
 		convertToMorse()
 	}
 
 	return (
 		<div className='container'>
 			<h1>Morse Code Converter</h1>
-			<form onSubmit={handleSubmit}>
+			<form>
 				<textarea
 					id='words-to-morse-input'
 					placeholder='Enter words here...'
 					value={inputText}
 					onChange={handleInputChange}
 				/>
-				<button type='submit'>Convert to Morse</button>
 			</form>
-			<p>
-				Converted Morse code: <strong>{convertedMorse}</strong>
-			</p>
+			<div className='converted-morse'>
+				<p>
+					Converted Morse code: <strong>{convertedMorse}</strong>
+				</p>
+			</div>
 		</div>
 	)
 }

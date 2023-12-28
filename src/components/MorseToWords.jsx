@@ -50,36 +50,31 @@ export default function MorseToWords() {
 		const wordsResult = morseArray
 			.map(morse => morseCodeReverseMap[morse] || '')
 			.join('')
-
-		setConvertedWords(
-			wordsResult.charAt(0).toUpperCase() + wordsResult.slice(1).toLowerCase()
-		)
+		setConvertedWords(wordsResult)
 	}
 
 	const handleInputChange = event => {
-		setInputMorse(event.target.value)
-	}
-
-	const handleSubmit = event => {
-		event.preventDefault()
+		const inputValue = event.target.value
+		setInputMorse(inputValue)
 		convertToWords()
 	}
 
 	return (
 		<div className='container'>
 			<h1>Words to Morse Code Converter</h1>
-			<form onSubmit={handleSubmit}>
+			<form>
 				<textarea
-					id='morse-code-input'
+					id='words-to-morse-input'
 					placeholder='Enter Morse code here...'
 					value={inputMorse}
 					onChange={handleInputChange}
 				/>
-				<button type='submit'>Convert to Words</button>
 			</form>
-			<p>
-				Converted words: <strong>{convertedWords}</strong>
-			</p>
+			<div className='converted-text'>
+				<p>
+					Converted words: <strong>{convertedWords}</strong>
+				</p>
+			</div>
 		</div>
 	)
 }

@@ -1,0 +1,52 @@
+.container textarea {
+	width: 335px;
+	height: 135px;
+
+	border-radius: 10px;
+	border: 1px solid rgb(128, 128, 128, 0.5);
+	box-shadow: 5px 5px 20px rgb(0, 0, 0, 0.2);
+
+	padding: 15px;
+}
+
+.container textarea::placeholder {
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	margin: 0 50px;
+	max-width: 368px;
+}
+
+.container h3 {
+	font-weight: 500;
+	font-size: 24px;
+}
+
+.options {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	margin-top: 20px;
+}
+
+.options button {
+	background-color: white;
+
+	border: 1px solid rgb(128, 128, 128, 0.3);
+	border-radius: 50%;
+
+	width: 40px;
+
+	box-shadow: 5px 5px 20px rgb(0, 0, 0, 0.2);
+
+	padding: 10px;
+
+	font-size: 15px;
+}
+
+.option-buttons button {
+	margin-right: 10px;
+}

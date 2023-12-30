@@ -3,15 +3,26 @@
 	height: 135px;
 
 	border-radius: 10px;
-	border: 1px solid rgb(128, 128, 128, 0.5);
+	border: 2px solid rgb(128, 128, 128, 0.5);
 	box-shadow: 5px 5px 20px rgb(0, 0, 0, 0.2);
 
 	padding: 15px;
+
+	outline: 1px solid rgb(128, 128, 128, 0.9);
+
+	font-size: 20px;
+	font-weight: 500;
 }
 
 .container textarea::placeholder {
 	padding: 0;
 	margin: 0;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.container textarea:focus {
+	outline-offset: 2px;
 }
 
 .container {
@@ -22,31 +33,4 @@
 .container h3 {
 	font-weight: 500;
 	font-size: 24px;
-}
-
-.options {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-
-	margin-top: 20px;
-}
-
-.options button {
-	background-color: white;
-
-	border: 1px solid rgb(128, 128, 128, 0.3);
-	border-radius: 50%;
-
-	width: 40px;
-
-	box-shadow: 5px 5px 20px rgb(0, 0, 0, 0.2);
-
-	padding: 10px;
-
-	font-size: 15px;
-}
-
-.option-buttons button {
-	margin-right: 10px;
 }

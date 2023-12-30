@@ -1,0 +1,81 @@
+import { morseCodeMap } from '../morse-alphabet/morseCodeMap'
+
+export default function Letters() {
+	const keys = Object.keys(morseCodeMap)
+	const values = Object.values(morseCodeMap)
+
+	return (
+		<tbody>
+			<tr>
+				<th>{keys[10]}</th>
+				<td>{values[10]}</td>
+				<th>{keys[11]}</th>
+				<td>{values[11]}</td>
+				<th>{keys[12]}</th>
+				<td>{values[12]}</td>
+			</tr>
+			<tr>
+				<th>{keys[13]}</th>
+				<td>{values[13]}</td>
+				<th>{keys[14]}</th>
+				<td>{values[14]}</td>
+				<th>{keys[15]}</th>
+				<td>{values[15]}</td>
+			</tr>
+			<tr>
+				<th>{keys[16]}</th>
+				<td>{values[16]}</td>
+				<th>{keys[17]}</th>
+				<td>{values[17]}</td>
+				<th>{keys[18]}</th>
+				<td>{values[18]}</td>
+			</tr>
+			<tr>
+				<th>{keys[19]}</th>
+				<td>{values[19]}</td>
+				<th>{keys[20]}</th>
+				<td>{values[20]}</td>
+				<th>{keys[21]}</th>
+				<td>{values[21]}</td>
+			</tr>
+			<tr>
+				<th>{keys[22]}</th>
+				<td>{values[22]}</td>
+				<th>{keys[23]}</th>
+				<td>{values[23]}</td>
+				<th>{keys[24]}</th>
+				<td>{values[24]}</td>
+			</tr>
+			<tr>
+				<th>{keys[25]}</th>
+				<td>{values[25]}</td>
+				<th>{keys[26]}</th>
+				<td>{values[26]}</td>
+				<th>{keys[27]}</th>
+				<td>{values[27]}</td>
+			</tr>
+			<tr>
+				<th>{keys[28]}</th>
+				<td>{values[28]}</td>
+				<th>{keys[29]}</th>
+				<td>{values[29]}</td>
+				<th>{keys[30]}</th>
+				<td>{values[30]}</td>
+			</tr>
+			<tr>
+				<th>{keys[31]}</th>
+				<td>{values[31]}</td>
+				<th>{keys[32]}</th>
+				<td>{values[32]}</td>
+				<th>{keys[33]}</th>
+				<td>{values[33]}</td>
+			</tr>
+			<tr>
+				<th>{keys[34]}</th>
+				<td>{values[34]}</td>
+				<th>{keys[35]}</th>
+				<td>{values[35]}</td>
+			</tr>
+		</tbody>
+	)
+}

@@ -17,7 +17,8 @@ export default function Converter() {
 			.map(morse => morseCodeReverseMap[morse] || '')
 			.join('')
 		setConvertedWords(
-			wordsResult.charAt(0).toUpperCase() + wordsResult.slice(1).toLowerCase()
+			wordsResult
+			//.charAt(0).toUpperCase() + wordsResult.slice(1).toLowerCase()
 		)
 	}
 

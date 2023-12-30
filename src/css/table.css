@@ -1,0 +1,36 @@
+.morse-code-table {
+	margin: auto;
+}
+
+.morse-code-table h3 {
+	text-align: center;
+	margin-top: 75px;
+	font-size: 24px;
+	font-weight: 500;
+}
+
+tbody div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+div tbody th,
+div tbody td {
+	border: 1px solid black;
+	padding: 10px 50px;
+
+	font-size: 20px;
+}
+
+div tbody th {
+	background-color: rgb(128, 128, 128, 0.1);
+}
+
+div tbody td {
+	font-weight: 500;
+}
+
+.punctuations {
+	margin-bottom: 100px;
+}
